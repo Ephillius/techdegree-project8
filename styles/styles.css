@@ -1,35 +1,87 @@
-/*****************/
-/*GLOBAL SETTINGS*/
-/*****************/
+/******************************/
+/*  GLOBAL SETTINGS           */
+/******************************/
 * {
 	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  max-width: 1366px;
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+	margin: 0;
+	max-width: 1366px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #444140;
+
 }
 
 
-/*****************/
-/*******MAIN******/
-/*****************/
+/******************************/
+/*  MAIN                      */
+/******************************/
 main {
-	display: grid;
+
 }
 
 header {
-	grid-area: header;
-}
-
-main {
-	grid-area: main;
-	display: grid;
+	
 }
 
 
-/*****************/
-/**MEDIA QUERIES**/
-/*****************/
+
+/******************************/
+/*  CARDS                     */
+/******************************/
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: solid 3px white;
+	border-radius: 5px;
+	padding: 15px 0px;
+	margin: 20px auto;
+	width: 90%;
+	background-color: #F7EBE8;
+}
+
+.photo {
+	border-radius: 50%;
+	height: 80px;
+    width: auto;
+	margin: 0 20px;
+}
+
+.text {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.name {
+	font-size: 18px;
+	margin: 7px 0;
+}
+
+.email,
+.city {
+	font-size: 10px;
+	margin: 2px 0;
+}
+
+.name,
+.city {
+	text-transform: capitalize;
+}
+
+
+
+/******************************/
+/*  MEDIA QUERIES             */
+/******************************/
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 1024px) {
+
+}
