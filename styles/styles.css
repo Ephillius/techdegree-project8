@@ -6,11 +6,25 @@
 }
 
 body {
-	margin: 0;
 	max-width: 1366px;
 	font-family: 'Roboto', sans-serif;
 	background-color: #444140;
 
+}
+
+
+
+/******************************/
+/*  HEADER                    */
+/******************************/
+header {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+	text-align: center;
 }
 
 
@@ -20,11 +34,6 @@ body {
 main {
 
 }
-
-header {
-	
-}
-
 
 
 /******************************/
@@ -51,9 +60,7 @@ header {
 
 .text {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: flex-start;
+	flex-direction: column;
 }
 
 .name {
