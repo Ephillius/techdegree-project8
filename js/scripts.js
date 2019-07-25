@@ -22,7 +22,7 @@ $.ajax({
 
 			const html = 
 			`
-				<div id="${index+1}" class="card">
+				<div class="card">
 					<img class="photo" src="${pic}" alt>
 					<div class="text">
 						<h3 class="name">${name}</h3>
