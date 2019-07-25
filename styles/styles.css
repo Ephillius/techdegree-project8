@@ -6,7 +6,9 @@
 }
 
 body {
+	width: 95%;
 	max-width: 1366px;
+	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	background-color: #444140;
 
@@ -19,20 +21,31 @@ body {
 /******************************/
 header {
 	display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center;
 }
 
 #title {
 	text-align: center;
+	width: 300px;
+}
+
+input[type="search"] {
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
 }
 
 
 /******************************/
 /*  MAIN                      */
 /******************************/
-main {
-
+#directory {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 10px auto;
 }
 
 
@@ -42,20 +55,21 @@ main {
 .card {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
 	border: solid 3px white;
 	border-radius: 5px;
-	padding: 15px 0px;
-	margin: 20px auto;
-	width: 90%;
+	padding: 15px 0;
+	margin: 10px 0;
+	width: 100%;
+	max-width: 300px;
 	background-color: #F7EBE8;
 }
 
 .photo {
 	border-radius: 50%;
-	height: 80px;
-    width: auto;
-	margin: 0 20px;
+    height: auto;
+    width: 80px;
+    margin: 0 20px;
+    border: solid 3px white;
 }
 
 .text {
@@ -86,9 +100,28 @@ main {
 /******************************/
 @media (min-width: 768px) {
 
+	#title {
+		text-align: initial;
+	}
+
+	#directory {
+		margin-top: 2vh;
+	}
 }
 
 
 @media (min-width: 1024px) {
+	header {
+		margin-top: 2vh;
+		justify-content: space-between;
+	}
 
+	#title {
+		width: initial;
+	}
+
+	#directory {
+		margin-top: 5vh;
+		justify-content: space-between;
+	}
 }
