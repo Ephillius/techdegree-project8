@@ -11,7 +11,6 @@ body {
 	margin: 0 auto;
 	font-family: 'Roboto', sans-serif;
 	background-color: #444140;
-
 }
 
 
@@ -52,7 +51,8 @@ input[type="search"] {
 /******************************/
 /*  CARDS                     */
 /******************************/
-.card {
+.card,
+.modal_card {
 	display: flex;
 	align-items: center;
 	border: solid 3px white;
@@ -64,7 +64,7 @@ input[type="search"] {
 	background-color: #F7EBE8;
 }
 
-.photo {
+.card .photo {
 	border-radius: 50%;
     height: auto;
     width: 80px;
@@ -72,18 +72,18 @@ input[type="search"] {
     border: solid 3px white;
 }
 
-.text {
+.card .text {
 	display: flex;
 	flex-direction: column;
 }
 
-.name {
+.card .name {
 	font-size: 18px;
 	margin: 7px 0;
 }
 
-.email,
-.city {
+.card .email,
+.card .city {
 	font-size: 10px;
 	margin: 2px 0;
 }
@@ -93,6 +93,47 @@ input[type="search"] {
 	text-transform: capitalize;
 }
 
+
+/******************************/
+/*  MODAL                     */
+/******************************/
+#overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(3, 10, 20, 0.5);
+}
+
+.modal_card {
+	flex-direction: column;
+	width: 95%;
+	max-width: 400px;
+}
+
+.fa {
+	font-size: 30px;
+    align-self: flex-end;
+    margin-right: 5%;
+}
+
+.modal_card .photo {
+	border-radius: 50%;
+	border: solid 3px white;
+}
+
+.modal_card .text {
+	text-align: center;
+	padding: 0 5%;
+}
+
+.address {
+	text-transform: capitalize;	
+}
 
 
 /******************************/
