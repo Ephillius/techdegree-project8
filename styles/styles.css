@@ -30,7 +30,7 @@ header {
 	width: 300px;
 }
 
-input[type="search"] {
+input[type="text"] {
 	width: 100%;
 	max-width: 300px;
 	padding: 10px;
