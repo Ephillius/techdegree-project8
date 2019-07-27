@@ -1,6 +1,5 @@
 window.onload = function () {
 
-	const input = document.querySelector('input').value;
 	const overlay = document.getElementById('overlay');
 	overlay.style.display = "none";
 	const modalCard = document.querySelector('.modal_card');
@@ -109,14 +108,13 @@ window.onload = function () {
 					name += ' ';
 					name += users[index].name.last;
 
-				const regexp = /w/g;
-				const match = name.match(regexp);
-
-				if(input !== match) {
-					card[index].style.display = '';
-				} else {
-					card[index].style.display = 'none';
-				}
+				$('input').keyup(() => {
+					const value = $(this).val();
+					const regExp = new RegExp(value, 'i');
+					$('.card').each(() => {
+						const match = regexp.test($(this).data(''));
+					});
+				});
 			});
 		}
 	});
