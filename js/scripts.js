@@ -1,10 +1,10 @@
 window.onload = function () {
 
-	const overlay = document.getElementById('overlay');
+	const overlay = document.querySelector('#overlay');
 	overlay.style.display = "none";
 	const modalCard = document.querySelector('.modal_card');
 
-	const directory = document.getElementById('directory');
+	const directory = document.querySelector('#directory');
 	const card = document.getElementsByClassName('card');
 
 
@@ -104,17 +104,21 @@ window.onload = function () {
 				//  SEARCH USER
 				// -----------------------------
 				
-				let name = users[index].name.first;
-					name += ' ';
-					name += users[index].name.last;
+				const search = function() {
+					const filter = $('#search').val().toLowerCase();
+					const cards = $("#directory .card");
 
-				$('input').keyup(() => {
-					const value = $(this).val();
-					const regExp = new RegExp(value, 'i');
-					$('.card').each(() => {
-						const match = regexp.test($(this).data(''));
-					});
-				});
+					for (let i = 0; i < cards.length; i++) {
+						const searchItemsName = cards[i].getElementsByTagName("h3")[0];
+						if ((searchItemsName.innerHTML.toLowerCase().indexOf(filter) > -1)) {
+							cards[i].style.display = "";
+						} else {
+							cards[i].style.display = "none";
+						}
+					};
+				};
+
+				$('#search').on('keyup', search);
 			});
 		}
 	});
