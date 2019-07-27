@@ -153,6 +153,13 @@ input[type="text"] {
 
 
 @media (min-width: 1024px) {
+	body {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    height: 100vh;
+	}
+
 	header {
 		margin-top: 2vh;
 		justify-content: space-between;
